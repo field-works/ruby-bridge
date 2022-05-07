@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "field_reports"
-  spec.version = "2.0.0rc3"
+  spec.version = "2.0.0"
   spec.authors = ["Field Works, LLC"]
   spec.email = ["support@field-works.co.jp"]
   spec.summary = "Field Reports Ruby Bridge"
