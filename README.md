@@ -45,7 +45,7 @@ https://www.field-works.co.jp/製品情報/
 
 gemコマンドを利用して，インストール媒体のgemファイルをインストールしてください。
 
-```shell
+```
 $ gem install field_reports-2.0.0.gem
 ```
 
@@ -53,7 +53,7 @@ $ gem install field_reports-2.0.0.gem
 
 GitHubに登録されているソースコードからインストールする場合は，以下のコマンドを実行してください。
 
-```shell
+```
 $ gem install specific_install
 $ gem specific_install -l https://github.com/field-works/ruby-bridge.git -b 2.0.0
 ```
@@ -63,7 +63,7 @@ $ gem specific_install -l https://github.com/field-works/ruby-bridge.git -b 2.0.
 
 以下のコマンドを実行してください。
 
-```shell
+```
 $ irb
 > require 'field_reports'
 > reports = FieldReports::Bridge.create_proxy("exec:/usr/local/bin/reports")
@@ -80,7 +80,7 @@ $ irb
 
 Field Reportsをサーバーモードで起動してください。
 
-```shell
+```
 $ reports server -l3
 ```
 
