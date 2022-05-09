@@ -73,7 +73,7 @@ $ irb
 => "%PDF-1.6\n%\x80\x81\x82\x83\n..."
 ```
 
-- 動作環境に応じて，create_proxy()に与えるパスを適宜変更してください。  
+* 動作環境に応じて，create_proxy()に与えるパスを適宜変更してください。  
   （Windowsでは，"exec:C:/Program Files/Field Works/Field Reports x.x/bin/reports.exe"など）
 
 ### HTTP通携時
@@ -96,7 +96,7 @@ $ irb
 => "%PDF-1.6\n%\x80\x81\x82\x83\n..."
 ```
 
-- 動作環境に応じて，create_proxy()に与えるURLを適宜変更してください。  
+* 動作環境に応じて，create_proxy()に与えるURLを適宜変更してください。  
 
 ## API使用例
 
