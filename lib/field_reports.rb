@@ -43,7 +43,7 @@ module FieldReports
       uri = uri.nil? ? ENV['REPORTS_PROXY'] : uri
       uri = uri.nil? ? "exec:reports" : uri
       if uri.start_with?("exec:") then
-        uris = uri.split(':')[1].split("?")
+        uris = uri[5..-1].split("?")
         if uris.length == 2 then
           q = URI.decode_www_form(uris[1]).to_h
           cwd = q.has_key?('cwd') ? q['cwd'] : "."
