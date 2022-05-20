@@ -18,7 +18,7 @@ module FieldReports
 
     # レンダリング・パラメータを元にレンダリングを実行します。
     #
-    # @param [String|Hash] param JSON文字列または辞書形式レンダリング・パラメータ
+    # @param [String|Hash] param JSON文字列またはハッシュ値レンダリング・パラメータ
     # @return [String] PDFデータ
     # @raise [ReportsError] Field Reportsとの連携に失敗した場合に発生
     # @note ユーザーズ・マニュアル「第5章 レンダリングパラメータ」参照

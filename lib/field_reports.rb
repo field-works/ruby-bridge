@@ -24,7 +24,7 @@ module FieldReports
     #
     # @param [String] uri Field Reportsとの接続方法を示すURI．  
     #   nilの場合，環境変数'REPORTS_PROXY'よりURIを取得します。  
-    #   環境変数'REPORTS_PROXY'も未設定の場合のURIは，"exec:reports"とします。
+    #   環境変数'REPORTS_PROXY'も未設定の場合の既定値は，"exec:reports"です。
     #
     #   書式（コマンド連携時）:
     #
