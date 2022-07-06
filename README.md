@@ -68,7 +68,7 @@ $ irb
 > require 'field_reports'
 > reports = FieldReports::Bridge.create_proxy("exec:/usr/local/bin/reports")
 > reports.version()
-=> "2.0.0b3"
+=> "2.0.0rc4"
 > reports.render({})
 => "%PDF-1.6\n%\x80\x81\x82\x83\n..."
 ```
@@ -91,7 +91,7 @@ $ irb
 > require 'field_reports'
 > reports = FieldReports::Bridge.create_proxy("http://localhost:50080/")
 > reports.version()
-=> "2.0.0b3"
+=> "2.0.0rc4"
 > reports.render({})
 => "%PDF-1.6\n%\x80\x81\x82\x83\n..."
 ```
