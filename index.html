@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.28
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'>
+<h1 id="label-Ruby+Bridge+2.0.0">Ruby Bridge 2.0.0</h1>
+
+<p>Field Reports Ruby Bridge（以降，本モジュールと表記します）は， PDF帳票ツールField ReportsをRubyから利用するためのライブラリです。</p>
+
+<p>Ruby Bridge APIを通じて，Field Reportsの各機能を呼び出すことができます。</p>
+<ul><li>
+<p>Field Reportsのバージョンを取得する。</p>
+</li><li>
+<p>レンダリング・パラメータを元にPDFを生成し，結果をバイナリ文字列として受け取る。</p>
+</li><li>
+<p>PDFデータを解析し，フィールドや注釈の情報を取得する。</p>
+</li></ul>
+
+<h2 id="label-E5-BF-85-E8-A6-81-E6-9D-A1-E4-BB-B6">必要条件</h2>
+
+<h3 id="label-Field+Reports-E6-9C-AC-E4-BD-93">Field Reports本体</h3>
+
+<p>本モジュールのご利用に際しては，Field Reports本体が導入済みである必要があります。</p>
+
+<p>Field Reportsのご購入もしくは試用版のダウンロードにつきましては， 下記サイトをご参照ください。</p>
+
+<p><a href="https://www.field-works.co.jp">www.field-works.co.jp</a>/製品情報/</p>
+
+<h3 id="label-E9-80-A3-E6-90-BA-E6-89-8B-E6-AE-B5-E3-81-AE-E9-81-B8-E6-8A-9E">連携手段の選択</h3>
+
+<p>本モジュールとField Reports本体との連携方法として，以下の２種類があります。 システム構成に応じて，適切な連携方法を選択してください。</p>
+<ul><li>
+<p>コマンド呼び出しによる連携</p>
+<ul><li>
+<p>reports本体と本モジュールを同一マシンに配置する必要があります。</p>
+</li><li>
+<p>パスが通る場所にreportsコマンドを置くか，reportsコマンドのパスをAPIに渡してください。</p>
+</li><li>
+<p>reports本体と本モジュールを同一マシンに配置する必要があります。</p>
+</li><li>
+<p>パスが通る場所にreportsコマンドを置くか，reportsコマンドのパスをAPIに渡してください。</p>
+</li></ul>
+</li><li>
+<p>HTTP通信による連携</p>
+<ul><li>
+<p>Field Reports本体をリモートマシンに配置することができます。</p>
+</li><li>
+<p>Field Reportsは，サーバーモードで常駐起動させてください（<code>reports server</code>）。</p>
+</li><li>
+<p>サーバーモードで使用するポート番号（既定値：<code>50080</code>）の通信を許可してください。</p>
+</li></ul>
+</li></ul>
+
+<h3 id="label-Ruby-E5-87-A6-E7-90-86-E7-B3-BB">Ruby処理系</h3>
+<ul><li>
+<p>Ruby 2.5以上</p>
+</li></ul>
+
+<h2 id="label-E3-82-A4-E3-83-B3-E3-82-B9-E3-83-88-E3-83-BC-E3-83-AB">インストール</h2>
+
+<h3 id="label-E3-82-A4-E3-83-B3-E3-82-B9-E3-83-88-E3-83-BC-E3-83-AB-E5-AA-92-E4-BD-93-E3-81-8B-E3-82-89-E3-81-AE-E3-82-A4-E3-83-B3-E3-82-B9-E3-83-88-E3-83-BC-E3-83-AB">インストール媒体からのインストール</h3>
+
+<p>gemコマンドを利用して，インストール媒体のgemファイルをインストールしてください。</p>
+
+<pre class="code ruby"><code class="ruby">$ gem install field_reports-2.0.0.gem
+</code></pre>
+
+<h3 id="label-GitHub-E3-81-8B-E3-82-89-E3-81-AE-E3-82-A4-E3-83-B3-E3-82-B9-E3-83-88-E3-83-BC-E3-83-AB">GitHubからのインストール</h3>
+
+<p>GitHubに登録されているソースコードからインストールする場合は，以下のコマンドを実行してください。</p>
+
+<pre class="code ruby"><code class="ruby">$ gem install specific_install
+$ gem specific_install -l https://github.com/field-works/ruby-bridge.git -b 2.0.0
+</code></pre>
+
+<h2 id="label-E5-8B-95-E4-BD-9C-E7-A2-BA-E8-AA-8D">動作確認</h2>
+
+<h3 id="label-E3-82-B3-E3-83-9E-E3-83-B3-E3-83-89-E9-80-A3-E6-90-BA-E6-99-82">コマンド連携時</h3>
+
+<p>以下のコマンドを実行してください。</p>
+
+<pre class="code ruby"><code class="ruby">$ irb
+&gt; require &#39;field_reports&#39;
+&gt; reports = FieldReports::Bridge.create_proxy(&quot;exec:/usr/local/bin/reports&quot;)
+&gt; reports.version()
+=&gt; &quot;2.0.0&quot;
+&gt; reports.render({})
+=&gt; &quot;%PDF-1.6\n%\x80\x81\x82\x83\n...&quot;
+</code></pre>
+<ul><li>
+<p>動作環境に応じて，create_proxy()に与えるパスを適宜変更してください。<br>  （Windowsでは，“exec:C:/Program Files/Field Works/Field Reports x.x/bin/reports.exe”など）</p>
+</li></ul>
+
+<h3 id="label-HTTP-E9-80-9A-E6-90-BA-E6-99-82">HTTP通携時</h3>
+
+<p>Field Reportsをサーバーモードで起動してください。</p>
+
+<pre class="code ruby"><code class="ruby">$ reports server -l3
+</code></pre>
+
+<p>次に，以下のコマンドを実行してください</p>
+
+<pre class="code ruby"><code class="ruby">$ irb
+&gt; require &#39;field_reports&#39;
+&gt; reports = FieldReports::Bridge.create_proxy(&quot;http://localhost:50080/&quot;)
+&gt; reports.version()
+=&gt; &quot;2.0.0&quot;
+&gt; reports.render({})
+=&gt; &quot;%PDF-1.6\n%\x80\x81\x82\x83\n...&quot;
+</code></pre>
+<ul><li>
+<p>動作環境に応じて，create_proxy()に与えるURLを適宜変更してください。</p>
+</li></ul>
+
+<h2 id="label-API-E4-BD-BF-E7-94-A8-E4-BE-8B">API使用例</h2>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>field_reports</span><span class='tstring_end'>&quot;</span></span>
+
+<span class='id identifier rubyid_reports'>reports</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="FieldReports.html" title="FieldReports (module)">FieldReports</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="FieldReports/Bridge.html" title="FieldReports::Bridge (class)">Bridge</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create_proxy'><span class='object_link'><a href="FieldReports/Bridge.html#create_proxy-class_method" title="FieldReports::Bridge.create_proxy (method)">create_proxy</a></span></span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_param'>param</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>template</span><span class='label_end'>&quot;:</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>paper</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>A4</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>context</span><span class='label_end'>&quot;:</span> <span class='lbrace'>{</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hello</span><span class='label_end'>&quot;:</span> <span class='lbrace'>{</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>new</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tx</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>value</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello, World!</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rect</span><span class='label_end'>&quot;:</span> <span class='lbracket'>[</span><span class='int'>100</span><span class='comma'>,</span> <span class='int'>700</span><span class='comma'>,</span> <span class='int'>400</span><span class='comma'>,</span> <span class='int'>750</span><span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span>
+<span class='rbrace'>}</span>
+<span class='id identifier rubyid_pdf'>pdf</span> <span class='op'>=</span> <span class='id identifier rubyid_reports'>reports</span><span class='period'>.</span><span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+</code></pre>
+
+<h2 id="label-E3-83-89-E3-82-AD-E3-83-A5-E3-83-A1-E3-83-B3-E3-83-88">ドキュメント</h2>
+
+<p>Field Reportsの詳細な利用方法につきましては， <a href="https://support.field-works.co.jp/">Field Reportsサポートページ</a>を参照してください。</p>
+<ul><li>
+<p>ユーザーズマニュアル</p>
+</li><li>
+<p>FAQ</p>
+</li><li>
+<p>チュートリアル</p>
+</li><li>
+<p>サンプルプログラム</p>
+</li></ul>
+
+<h2 id="label-E3-83-A9-E3-82-A4-E3-82-BB-E3-83-B3-E3-82-B9">ライセンス</h2>
+
+<p>本モジュールのソースコードは，BSDライセンスのオープンソースとします。</p>
+
+<p><a href="https://github.com/field-works/ruby-bridge">github.com/field-works/ruby-bridge</a>/</p>
+
+<p>以下のような場合，自由に改変／再配布していただいて結構です。</p>
+<ul><li>
+<p>独自機能の追加</p>
+</li><li>
+<p>ビルド/実行環境等の違いにより，本モジュールが正常に機能しない。</p>
+</li><li>
+<p>未サポートの.NETバージョンへの対応のため改造が必要。</p>
+</li><li>
+<p>他の言語の拡張ライブラリ作成のベースとして利用したい。</p>
+</li></ul>
+
+<p>ただし，ソースを改変したモジュール自体において問題が発生し場合については， サポート対応いたしかねますのでご了承ください （Field Reports本体もしくはオリジナルの本モジュールに起因する問題であれば対応いたします）。</p>
+
+<h2 id="label-E8-91-97-E8-80-85">著者</h2>
+<ul><li>
+<p>合同会社フィールドワークス / Field Works, LLC</p>
+</li><li>
+<p><a href="https://www.field-works.co.jp">www.field-works.co.jp</a>/</p>
+</li><li>
+<p>support@field-works.co.jp</p>
+</li></ul>
+</div></div>
+
+      <div id="footer">
+  Generated on Wed Nov 16 09:23:05 2022 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-2.7.6).
+</div>
+
+    </div>
+  </body>
+</html>
